@@ -1,0 +1,192 @@
+// Place all the styles related to the Entry controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.next-page-div {
+  padding-top: 20px;
+} 
+.page-header h1 small {
+  display: block;
+  line-height: 20px;
+}
+/* Everything entry-related */
+
+span.gen_m {
+}
+span.gen_n {
+}
+span.gen_f {
+}
+
+.emph {
+  font-weight: bold;
+}
+
+span.genus {
+  font-weight: bold;
+  color:orange;
+  font-size:xx-small;
+}
+
+span.f {
+  font-weight: bold;
+  color:red;
+  font-size:xx-small;
+}
+
+span.m{
+  font-weight: bold;
+  color:blue;
+  font-size:xx-small;
+}
+
+span.n {
+  font-weight: bold;
+  color:purple;
+  font-size:xx-small;
+}
+
+
+span.dom {
+  //font-weight: bold;
+  font-size:x-small;
+}
+
+span.dom:before {
+  content: "(";
+}
+
+span.dom:after {
+  content: ")";
+}
+
+span.usage, span.title, span.transcr, span.fore, span.scientif {
+  font-style: italic;
+}
+
+span.def {
+  color: green;
+}
+
+.entries {
+  font-family: 'Crimson Text',arial, serif;
+  font-size: 1em;
+  /*  text-align:justify; */
+  padding-top: 6px;
+}
+
+.hanging-indent {
+  text-indent: -25px;
+  padding-left: 25px;
+}
+
+.hanging-indent .popover-inner{
+  text-indent: 0;
+}
+
+.entry .writing {
+  font-size: 1.5em;
+}
+
+.entry p {
+  margin:0;
+}
+
+.entry {
+  padding-top: 3px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom: 3px;
+}
+
+.entry.odd {
+  background: #EBEEF5;
+}
+
+.entries .span6:nth-child(even) {
+  border-left: 1px solid gray;
+  padding-left:20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.prior_1, .prior_2, .prior_3, .prior_4, .jlpt1, .jlpt2, .jlpt3, .jlpt4, .genki_k9 {
+  display:none;
+}
+
+.svg_image {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.svg_image .image_caption {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.svg_image .svg img{
+  margin-top: 10px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.pronunciation_audio {
+  background-image: url("/loudspeaker.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  text-indent: -99999px;
+}
+
+.famn {
+  font-variant: small-caps;
+}
+
+#entries-left:first-child {
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+
+}
+
+// Uses Bitcons images from http://somerandomdude.com/work/bitcons/
+
+.sub_entry_toggle {
+  position: relative;
+  left: -25px;
+  width: 16px;
+  height: 16px;
+  display:block;
+  background: image-url("arrow1_e.png") no-repeat;
+
+}
+.sub_entry_toggle.expanded {
+  background: image-url("arrow1_s.png") no-repeat;
+}
+
+.avatar {
+  padding-top: 5px;
+}
+
+div.entry_actions {
+
+  a {
+    font-size: 11pt;
+    float: right;
+
+    &.edit {
+      background: image-url("edit.png") no-repeat;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wakoku</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class='navbar navbar-fixed-top navbar-inverse'>
+    <div class='container'>
+      <div class="navbar-header">
+        <a href='<%= root_path %>' class='navbar-brand'>WaKokuJT</a>
+      </div>
+
+      <form class="navbar-form navbar-right" role="search" action='<%= root_path %>'>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content">
+    <%= yield %>
+
+    <hr>
+    <footer class="footer">
+      <p>Daten: &copy; <%= Time.now.year %> <a href="http://wadoku-ev.de">Wadoku e.V.</a> | Programmierung: &copy; <%= Time.now.year %> <a href="http://rbraun.net">Roger Braun</a></p>
+      <p>Code und Daten dieser Seite stehen unter offenen Lizenzen (CC und GPL). Beides findet sich auf <a href='https://github.com/Wadoku'>GitHub</a>.</p>
+    </footer>
+    </div>
+  </div>
+</body>
+</html>
