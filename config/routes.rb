@@ -7,7 +7,14 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'about' => 'home#about'
 
-  resources :entries
+  #other locales
+  get '/:locale' => 'home#index', as: :locale_root
+  get '/:locale/about' => 'home#about', as: :locale_about
+
+  scope "(:locale)", locale: /en|ja/ do
+    resources :entries
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

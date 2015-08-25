@@ -11,17 +11,17 @@
   <div class='navbar navbar-fixed-top navbar-inverse'>
     <div class='container'>
       <div class="navbar-header">
-        <a href='<%= root_path %>' class='navbar-brand'>WaKokuJT</a>
+        <a href='<%= locale_root_path(I18n.locale) %>' class='navbar-brand'>WaKokuJT</a>
       </div>
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="<%= current_page?(about_path) ? "active" : "" %>"><%= link_to "About Us", about_path %></li>
+          <li class="<%= current_page?(about_path) ? "active" : "" %>"><%= link_to t("navbar.about"), locale_about_path(I18n.locale) %></li>
         </ul>
 
-        <form class="navbar-form navbar-right" role="search" action='<%= root_path %>'>
+        <form class="navbar-form navbar-right" role="search" action='<%= locale_root_path(I18n.locale) %>'>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="<%= t("navbar.search") %>">
           </div>
         </form>
       </div>

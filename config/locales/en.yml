@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navbar:
+    about: "About Us"
+    search: "Search"
+  home:
+    search: "Search!"
