@@ -30,6 +30,15 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-less'
 gem 'lodash-rails'
+
+group :development, :test do
+  gem 'binding_of_caller'
+  gem 'pry'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
