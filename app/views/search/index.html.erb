@@ -1,0 +1,17 @@
+<div class='page-header'>
+  <h1>Suchergebnisse <small><%= @total %> Treffer </small></h1>
+</div>
+
+<div class='paginate'>
+  <%= paginate @entries %>
+</div>
+<div class='row entries-container'>
+  <div class='col-md-12 entries'>
+    <% @entries.each_with_index do |entry, index| %>
+      <%= render partial: "entry", locals: { odd: index % 2 == 0, entry: entry } %>
+    <% end %>
+  </div>
+</div>
+<div class='paginate'>
+  <%= paginate @entries %>
+</div>

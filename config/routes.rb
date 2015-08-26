@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post 'locales' => 'locales#change_locale', as: :change_locale
 
   resources :entries
+  resources :search
 
 
   # Example of regular route:

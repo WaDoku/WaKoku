@@ -30,6 +30,7 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-less'
 gem 'lodash-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'binding_of_caller'
