@@ -1,6 +1,16 @@
 jp:
   navbar:
     about: "案内"
-    search: "探す"
+    search: "検索"
   home:
-    search: "探す!"
+    search: "検索!"
+  search:
+    results: "検索結果"
+    hits: "%{count} 件"
+  views:
+    pagination:
+      first: "最初"
+      last: "最後"
+      previous: "前のページ"
+      next: "次のページ"
+      truncate: "..."

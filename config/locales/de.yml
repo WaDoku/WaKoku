@@ -4,3 +4,13 @@ de:
     search: "Suchen"
   home:
     search: "Suchen!"
+  search:
+    results: "Suchergebnisse"
+    hits: "%{count} Treffer"
+  views:
+    pagination:
+      first: "Erste"
+      last: "Letzte"
+      previous: "Vorherige"
+      next: "Nächste"
+      truncate: "..."

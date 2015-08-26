@@ -23,5 +23,10 @@ en:
   navbar:
     about: "About Us"
     search: "Search"
+  search:
+    results: "Searchresults"
+    hits:
+      one: "1 Entry"
+      other: "%{count} Entries"
   home:
     search: "Search!"
