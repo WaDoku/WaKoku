@@ -39,10 +39,7 @@
     <%= yield %>
 
     <hr>
-    <footer class="footer">
-      <p>Daten: &copy; <%= Time.now.year %> <a href="http://wadoku-ev.de">Wadoku e.V.</a> | Programmierung: &copy; <%= Time.now.year %> <a href="https://github.com/thebluber">Jiayi Zheng</a></p>
-      <p>Code und Daten dieser Seite stehen unter offenen Lizenzen (CC und GPL). Beides findet sich auf <a href='https://github.com/Wadoku'>GitHub</a>.</p>
-    </footer>
+    <%= render partial: "layouts/footer" %>
     </div>
   </div>
 </body>
