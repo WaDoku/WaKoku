@@ -1,4 +1,4 @@
-class EntriesController < ApplicationController
+class Admin::EntriesController < Admin::AdminController
   def index
     @entries = Entry.all
     @more = true

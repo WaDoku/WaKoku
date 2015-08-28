@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,10 +10,15 @@ Rails.application.routes.draw do
 
   post 'locales' => 'locales#change_locale', as: :change_locale
 
-  resources :entries
   resources :search
 
 
+  namespace :admin do
+    get "log_out" => "sessions#destroy",  as: :log_out
+    get "log_in" => "sessions#new", as: :log_in
+    resources :sessions
+    resources :entries
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
