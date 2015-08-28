@@ -1,9 +1,24 @@
 class Admin::EntriesController < Admin::AdminController
   def index
+    @page = params[:page] || 1
     @entries = Entry.all
-    @more = true
-    @total = 10
-    @offset = 1
-    @query = "a"
+    @total = @entries.count
+    @entries = @entries.page(@page)
+  end
+
+  def new
+    @entry = Entry.new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 end
