@@ -15,7 +15,7 @@ RSpec.describe Admin::SessionsController, :type => :controller do
     it "should create a new session" do
       post :create, email: admin.email, password: "1234"
       expect(session[:admin_id]).to eq admin.id
-      expect(response).to redirect_to(root_path)
+      expect(response).to redirect_to(admin_entries_path)
     end
   end
 
