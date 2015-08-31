@@ -1,0 +1,4 @@
+<div class='page-header'>
+  <h1><%= @entry.writing %> <%= link_to "Eintrag Editieren", edit_admin_entry_path(@entry), class: "btn btn-primary" %></h1>
+</div>
+<%= render partial: "entry", locals: { entry: @entry, odd: false } %>

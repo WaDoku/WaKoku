@@ -116,7 +116,6 @@ span.def {
 .svg_image {
   padding-top: 10px;
   padding-bottom: 10px;
-  display: block;
 }
 
 .svg_image .image_caption {
@@ -126,6 +125,7 @@ span.def {
 
 .svg_image .svg img{
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 200px;
   display: block;
   margin-left: auto;
