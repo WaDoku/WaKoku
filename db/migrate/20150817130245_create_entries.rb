@@ -9,7 +9,8 @@ class CreateEntries < ActiveRecord::Migration
       t.string :definition_fr
       t.text :textbox_en
       t.text :textbox_de
-      t.string :picture
+      t.string :image_uid
+      t.string :image_name
 
       t.timestamps
     end

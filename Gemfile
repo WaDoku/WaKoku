@@ -31,6 +31,7 @@ gem 'twitter-bootstrap-rails'
 gem 'font-awesome-less'
 gem 'lodash-rails'
 gem 'kaminari'
+gem 'dragonfly', '~> 1.0.10'
 
 group :development, :test do
   gem 'binding_of_caller'

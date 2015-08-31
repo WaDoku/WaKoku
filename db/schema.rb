@@ -30,7 +30,8 @@ ActiveRecord::Schema.define(version: 20150826170946) do
     t.string   "definition_fr"
     t.text     "textbox_en"
     t.text     "textbox_de"
-    t.string   "picture"
+    t.string   "image_uid"
+    t.string   "image_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
