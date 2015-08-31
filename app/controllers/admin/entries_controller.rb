@@ -1,4 +1,5 @@
 class Admin::EntriesController < Admin::AdminController
+  before_filter :get_entry, only: [:edit, :update, :destroy]
   def index
     @page = params[:page] || 1
     @entries = Entry.all
@@ -20,5 +21,10 @@ class Admin::EntriesController < Admin::AdminController
   end
 
   def destroy
+  end
+
+  private
+  def get_entry
+    @entry = Entry.find(params[:id])
   end
 end

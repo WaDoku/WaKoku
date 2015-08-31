@@ -1,0 +1,68 @@
+<%= form_for [:admin, entry], html: { class: "form-horizontal" } do |f| %>
+  <div class="form-group">
+    <%= f.label :writing, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :writing, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :kana, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :kana, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :romaji, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :romaji, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :picture, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.file_field :picture, accept: 'image/svg' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :definition_de, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :definition_de, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :definition_en, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :definition_en, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :definition_fr, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :definition_fr, class: "form-control" %>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :textbox_de, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_area :textbox_de, class: "form-control", rows: 10 %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :textbox_en, class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_area :textbox_en, class: "form-control", rows: 10 %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+      <%= submit_tag "Speichern", class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>
