@@ -88,6 +88,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.5.5)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.8)
@@ -182,6 +184,7 @@ DEPENDENCIES
   kaminari
   lodash-rails
   pry
+  rack-cache
   rails (= 4.1.8)
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
