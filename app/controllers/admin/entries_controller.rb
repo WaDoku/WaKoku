@@ -14,7 +14,8 @@ class Admin::EntriesController < Admin::AdminController
   def create
     @entry = Entry.new(entry_params)
     if @entry.save
-      redirect_to admin_entries_path
+      flash[:success] = "Eintrag wurde erfolgreich erstellt!"
+      redirect_to admin_entry_path(@entry)
     else
       flash[:danger] = @entry.errors
       render "new"
@@ -29,7 +30,8 @@ class Admin::EntriesController < Admin::AdminController
 
   def update
     if @entry.update(entry_params)
-      redirect_to admin_entries_path
+      flash[:success] = "Eintrag wurde geändert!"
+      redirect_to admin_entry_path(@entry)
     else
       flash[:danger] = @entry.errors
       render "edit"
