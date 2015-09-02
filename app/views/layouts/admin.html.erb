@@ -19,7 +19,7 @@
           <li class="<%= current_page?(admin_entries_path) ? "active" : "" %>"><%= link_to "Alle Einträge", admin_entries_path %></li>
         </ul>
 
-        <%= form_tag search_index_path, method: :get, class: "navbar-form navbar-right" do %>
+        <%= form_tag admin_entries_path, method: :get, class: "navbar-form navbar-right" do %>
           <div class="form-group">
             <%= text_field_tag :search, params[:search], class: "form-control", placeholder: t("navbar.search") %>
           </div>
