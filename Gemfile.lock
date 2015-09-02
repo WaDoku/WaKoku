@@ -32,6 +32,7 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-filestyle-rails (1.1.2)
     builder (3.2.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -175,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   binding_of_caller
+  bootstrap-filestyle-rails
   coffee-rails (~> 4.0.0)
   dragonfly (~> 1.0.10)
   factory_girl_rails (~> 4.0)

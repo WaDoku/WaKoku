@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-filestyle-rails'
 gem 'font-awesome-less'
 gem 'lodash-rails'
 gem 'kaminari'

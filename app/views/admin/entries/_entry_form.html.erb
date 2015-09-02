@@ -23,7 +23,17 @@
   <div class="form-group">
     <%= f.label :image, class: "col-md-2 control-label" %>
     <div class="col-md-8">
-      <%= f.file_field :image, accept: 'image/svg' %>
+      <% if entry.image %>
+        <div class="thumbnail">
+          <img src='<%= entry.image.url %>' type='image/svg+xml' alt='<%= entry.image.name %>' />
+          <div class="caption">
+            <h4><%= entry.image.name %></h4>
+
+            <%= link_to "Bild löschen", delete_image_admin_entry_path(entry), class: "btn btn-default", method: :put %>
+          </div>
+        </div>
+      <% end %>
+      <%= f.file_field :image %>
     </div>
   </div>
 

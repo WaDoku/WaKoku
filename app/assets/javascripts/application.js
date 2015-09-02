@@ -15,4 +15,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require lodash
+//= require bootstrap-filestyle
 //= require_tree .
