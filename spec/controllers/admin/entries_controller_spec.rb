@@ -67,4 +67,23 @@ RSpec.describe Admin::EntriesController, type: :controller do
     end
   end
 
+  describe "DELETE destroy" do
+    it "should delete an entry" do
+      delete :destroy, id: entry.id
+      expect(Entry.find_by_id(entry.id)).to be_nil
+    end
+  end
+
+  describe "PUT delete image" do
+    before do
+      entry.image = fixture_file_upload("haniwa.svg")
+      entry.save
+    end
+    it "should delete the image in the entry" do
+      expect(entry.image).to_not be nil
+      put :delete_image, id: entry.id
+      expect(Entry.last.image).to be nil
+    end
+  end
+
 end

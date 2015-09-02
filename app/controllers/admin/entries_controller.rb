@@ -1,5 +1,5 @@
 class Admin::EntriesController < Admin::AdminController
-  before_filter :get_entry, only: [:show, :edit, :update, :destroy]
+  before_filter :get_entry, only: [:show, :edit, :update, :destroy, :delete_image]
   def index
     @page = params[:page] || 1
     @entries = Entry.all
@@ -39,6 +39,15 @@ class Admin::EntriesController < Admin::AdminController
   end
 
   def destroy
+    if @entry.destroy
+      redirect_to admin_entries_path
+    end
+  end
+
+  def delete_image
+    @entry.image = nil
+    @entry.save
+    redirect_to edit_admin_entry_path(@entry)
   end
 
   private
