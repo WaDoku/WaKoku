@@ -1,27 +1,24 @@
 <div class='entry <%= odd ? "odd" : "" %>'>
-    <p class='hanging-indent'>
-      <span class='writing'>
-        <ruby><rb><%= entry.writing %></rb><rp> (</rp><rt><%= entry.kana %></rt><rp> )</rp></ruby>
+  <% if entry.image %>
+    <span class='svg_image'>
+      <span class='svg'>
+        <img src='<%= entry.image.url %>' type='image/svg' alt='<%= entry.image.name %>' />
       </span>
-      <span class="romaji">
-        <%= entry.romaji %>
-      </span>
-    </p>
-    <p class="definitions">
-      <span class="def_de"> <%= entry.definition_de %></span>
-      <br>
-      <span class="def_en"> <%= entry.definition_en %></span>
-      <br>
-      <span class="def_fr"> <%= entry.definition_fr %></span>
-    </p>
-      <% if entry.picture %>
-      <span class='svg_image'>
-        <span class='image_caption'>
-          <%= entry.picture %>
-        </span>
-        <span class='svg'>
-          <img src='<%= "images/" + entry.picture %>' type='image/svg+xml' alt='<%= entry.picture %>' />
-        </span>
-      </span>
-      <% end %>
+    </span>
+  <% end %>
+  <p class='hanging-indent'>
+  <span class='writing'>
+    <ruby><rb><%= entry.writing %></rb><rp> (</rp><rt><%= entry.kana %></rt><rp> )</rp></ruby>
+  </span>
+  <span class="romaji">
+    <%= entry.romaji %>
+  </span>
+  </p>
+  <p class="definitions">
+  <span class="def_de"> <%= entry.definition_de %></span>
+  <br>
+  <span class="def_en"> <%= entry.definition_en %></span>
+  <br>
+  <span class="def_fr"> <%= entry.definition_fr %></span>
+  </p>
 </div>
