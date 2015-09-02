@@ -7,9 +7,11 @@
     </span>
   <% end %>
   <p class='hanging-indent'>
-  <span class='writing'>
-    <ruby><rb><%= entry.writing %></rb><rp> (</rp><rt><%= entry.kana %></rt><rp> )</rp></ruby>
-  </span>
+  <%= link_to edit_admin_entry_path(entry) do %>
+    <span class='writing'>
+      <ruby><rb><%= entry.writing %></rb><rp> (</rp><rt><%= entry.kana %></rt><rp> )</rp></ruby>
+    </span>
+  <% end %>
   <span class="romaji">
     <%= entry.romaji %>
   </span>
