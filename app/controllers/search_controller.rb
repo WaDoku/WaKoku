@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     @page = params[:page] || 1
-    @results = Entry.where("writing = :writing OR kana = :kana OR romaji = :romaji OR definition_de LIKE :def_de OR definition_en LIKE :def_en OR definition_fr LIKE :def_fr", search_params(params[:search]))
+    @results = params[:search] && params[:search].strip != "" ? Entry.where("writing = :writing OR kana = :kana OR romaji = :romaji OR definition_de LIKE :def_de OR definition_en LIKE :def_en OR definition_fr LIKE :def_fr", search_params(params[:search])) : Entry.where(id: nil)
     @total = @results.count
     @entries = @results.page(@page)
   end
