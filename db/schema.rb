@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150826170946) do
+ActiveRecord::Schema.define(version: 20150904140831) do
 
   create_table "admins", force: true do |t|
     t.string   "email"
@@ -32,6 +32,21 @@ ActiveRecord::Schema.define(version: 20150826170946) do
     t.text     "textbox_de"
     t.string   "image_uid"
     t.string   "image_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "icons", force: true do |t|
+    t.string   "icon_uid"
+    t.string   "icon_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "references", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "icon_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
