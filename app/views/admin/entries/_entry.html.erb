@@ -1,4 +1,14 @@
 <div class='entry <%= odd ? "odd" : "" %>'>
+  <% if current_page? admin_entries_path %>
+    <div class="right-panel">
+      <%= link_to edit_admin_entry_path(entry), class: "#{odd ? "btn-odd " : ""}btn btn-default btn-sm", data: { toggle: "tooltip", title: "Eintrag Editieren", placement: "bottom"} do %>
+        <i class="fa fa-pencil-square-o"></i>
+      <% end %>
+      <%= link_to admin_entry_path(entry), class: "#{odd ? "btn-odd " : ""}btn btn-default btn-sm", method: :delete, data: { confirm: "Diesen Eintrag wirklich löschen?", toggle: "tooltip", title: "Eintrag Löschen", placement: "bottom"} do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+    </div>
+  <% end %>
   <% if entry.image %>
     <span class='svg_image'>
       <span class='svg'>
@@ -7,7 +17,7 @@
     </span>
   <% end %>
   <p class='hanging-indent'>
-  <%= link_to edit_admin_entry_path(entry) do %>
+  <%= link_to admin_entry_path(entry) do %>
     <span class='writing'>
       <ruby><rb><%= entry.writing %></rb><rp> (</rp><rt><%= entry.kana %></rt><rp> )</rp></ruby>
     </span>

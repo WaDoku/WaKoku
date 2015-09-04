@@ -40,6 +40,7 @@ class Admin::EntriesController < Admin::AdminController
 
   def destroy
     if @entry.destroy
+      flash[:success] = "Eintrag wurde gelöscht!"
       redirect_to admin_entries_path
     end
   end

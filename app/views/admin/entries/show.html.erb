@@ -1,4 +1,13 @@
 <div class='page-header'>
-  <h1><%= @entry.writing %> <%= link_to "Eintrag Editieren", edit_admin_entry_path(@entry), class: "btn btn-primary" %></h1>
+  <h1><%= @entry.writing %>
+    <%= link_to edit_admin_entry_path(@entry), class: "btn btn-primary" do %>
+      <i class="fa fa-pencil-square-o"></i>
+      Eintrag Editieren
+    <% end %>
+    <%= link_to admin_entry_path(@entry), class: "btn btn-danger", method: :delete, data: { confirm: "Diesen Eintrag wirklich löschen?" } do %>
+      <i class="fa fa-trash-o"></i>
+      Eintrag Löschen
+    <% end %>
+  </h1>
 </div>
 <%= render partial: "entry", locals: { entry: @entry, odd: false } %>
