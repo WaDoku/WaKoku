@@ -33,7 +33,7 @@ class Admin::EntriesController < Admin::AdminController
       flash[:success] = "Eintrag wurde geändert!"
       redirect_to admin_entry_path(@entry)
     else
-      flash[:danger] = @entry.errors
+      flash[:danger] = @entry.errors.full_messages.join "\n"
       render "edit"
     end
   end
