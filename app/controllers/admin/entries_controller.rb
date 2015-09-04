@@ -56,7 +56,8 @@ class Admin::EntriesController < Admin::AdminController
   end
 
   def entry_params
-    params.require(:entry).permit(:writing, :kana, :romaji, :definition_de, :definition_en, :definition_fr, :textbox_de, :textbox_en, :image)
+    #blank attributes should not be saved
+    params.require(:entry).permit(:writing, :kana, :romaji, :definition_de, :definition_en, :definition_fr, :textbox_de, :textbox_en, :image).delete_if {|k,v| v.blank?}
   end
 
   #bring the search parameter into the right format

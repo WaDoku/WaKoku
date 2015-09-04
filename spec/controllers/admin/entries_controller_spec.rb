@@ -52,6 +52,13 @@ RSpec.describe Admin::EntriesController, type: :controller do
       expect(Entry.last.textbox_en).to eq @new_entry[:textbox_en]
       expect(Entry.last.image.name).to eq "haniwa.svg"
     end
+
+    it "should ignore blank params" do
+      old_def = entry.definition_de
+      put :update, id: entry.id, entry: { definition_de: "", textbox_de: "" }
+      expect(Entry.last.definition_de).to eq old_def
+      expect(Entry.last.textbox_de).to be_nil
+    end
   end
   describe "POST create" do
     it "should create a new entry" do
