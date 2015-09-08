@@ -23,6 +23,7 @@ Rails.application.routes.draw do
         put 'delete_image', as: :delete_image
       end
     end
+    resources :icons, only: [:index, :create]
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
