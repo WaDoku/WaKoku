@@ -14,3 +14,14 @@ de:
       previous: "Vorherige"
       next: "Nächste"
       truncate: "..."
+  activerecord:
+    attributes:
+      entry:
+        writing: "Kanji"
+        kana: "Kana"
+        definition_de: "Deutsche Definition"
+        definition_en: "Englische Definition"
+        definition_fr: "Französische Definition"
+        image: "Bild"
+        textbox_de: "Deutsche Textbox"
+        textbox_en: "Englische Textbox"
