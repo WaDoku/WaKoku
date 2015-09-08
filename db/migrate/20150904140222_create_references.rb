@@ -4,6 +4,7 @@ class CreateReferences < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.integer :icon_id
+      t.integer :entry_id
 
       t.timestamps
     end

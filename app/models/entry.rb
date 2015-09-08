@@ -1,4 +1,5 @@
 class Entry < ActiveRecord::Base
+  has_many :references
   dragonfly_accessor :image
   validates_presence_of :writing
   validates_presence_of :kana

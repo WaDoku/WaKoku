@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150904140831) do
     t.string   "name"
     t.string   "url"
     t.integer  "icon_id"
+    t.integer  "entry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
