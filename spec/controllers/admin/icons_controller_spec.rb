@@ -16,7 +16,7 @@ RSpec.describe Admin::IconsController, type: :controller do
 
   describe "POST create" do
     it "should create new icon" do
-      post :create, icon: fixture_file_upload("haniwa.svg")
+      post :create, icon: { icon: fixture_file_upload("haniwa.svg") }
       expect(Icon.last.icon.name).to eq "haniwa.svg"
       expect(response).to redirect_to admin_icons_path
     end
