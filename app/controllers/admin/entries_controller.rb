@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Admin::EntriesController < Admin::AdminController
   before_filter :get_entry, only: [:show, :edit, :update, :destroy, :delete_image]
   def index

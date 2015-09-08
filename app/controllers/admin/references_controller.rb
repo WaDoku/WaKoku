@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Admin::ReferencesController < Admin::AdminController
   before_filter :get_entry
 
