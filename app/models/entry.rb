@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Entry < ActiveRecord::Base
   has_many :references
   dragonfly_accessor :image
