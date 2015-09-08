@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       member do
         put 'delete_image', as: :delete_image
       end
+      resources :references, only: [:index, :create, :destroy]
     end
     resources :icons, only: [:index, :create]
   end

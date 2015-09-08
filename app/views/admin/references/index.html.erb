@@ -1,0 +1,50 @@
+<div class='page-header'>
+  <h1>Referenzen zu <%= link_to @entry.writing, admin_entry_path(@entry) %></h1>
+</div>
+<%= form_for [:admin, @entry, @new_reference], html: { class: "reference-form" } do |f| %>
+  <div class="row">
+      <%= f.label :icon, class: "control-label col-xs-2" %>
+      <%= f.label :name, class: "control-label col-xs-2" %>
+      <%= f.label :url, class: "control-label col-xs-6" %>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-2">
+      <%= f.select :icon_id, nil,  { include_blank: true }, { class: "form-control" } do %>
+        <%= @icons.each do |icon| %>
+          <%= content_tag(:option, icon.icon.name, value: icon.id) %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="form-group col-xs-2">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-6">
+      <%= f.text_field :url, class: "form-control" %>
+    </div>
+    <div class="form-group col-xs-2">
+      <%= submit_tag "Hinzufügen", class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>
+
+<% @references.each do |reference| %>
+  <div class="row">
+    <div class="form-group col-xs-2">
+      <% if reference.icon %>
+        <img class="reference-icon" src="<%= reference.icon.icon.url %>" alt="<%= reference.icon.icon.path %>">
+      <% end %>
+    </div>
+    <div class="form-group col-xs-2">
+      <%= reference.name %>
+    </div>
+    <div class="form-group col-xs-6">
+      <%= link_to reference.url, reference.url, target: "_blank" %>
+    </div>
+    <div class="form-group col-xs-2">
+      <%= link_to admin_entry_reference_path(@entry, reference), class: "btn btn-default btn-sm", method: :delete, data: { confirm: "Diese Referenz wirklich löschen?" } do %>
+        <i class="fa fa-trash-o"></i>
+        Löschen
+      <% end %>
+    </div>
+  </div>
+<% end %>
