@@ -9,9 +9,9 @@ RSpec.describe Entry, type: :model do
     let(:entry){ create :entry }
 
     it "should validate image size" do
-      entry.image = File.open("spec/fixtures/haniwa.svg") #< 500kb
+      entry.image = File.open("spec/fixtures/haniwa.svg") #< 1mb
       expect(entry.save).to be true
-      entry.image = File.open("spec/fixtures/komiketo.jpg") #> 500kb
+      entry.image = File.open("spec/fixtures/komiketo.jpg") #> 1mb
       expect(entry.save).to be false
       expect(entry.errors.full_messages).to eq ["Image Datei überschreitet das Uploadlimit"]
     end
