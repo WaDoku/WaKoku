@@ -14,13 +14,14 @@
     <%= entry.romaji %>
   </span>
   </p>
-  <p class="definitions">
-  <span class="def_de"> <%= entry.definition_de %></span>
   <% if entry.textbox_de %>
-    <button type="button" class="<%= odd ? "btn-odd" : "" %> btn btn-default btn-sm" data-toggle="modal" data-target="#entry<%= entry.id %>_textbox_de">
-      <i class="fa fa-book"></i>
-      mehr lesen
-    </button>
+    <p class="def_de">
+      <%= entry.definition_de %>
+      <button type="button" class="<%= odd ? "btn-odd" : "" %> btn btn-default btn-sm" data-toggle="modal" data-target="#entry<%= entry.id %>_textbox_de">
+        <i class="fa fa-book"></i>
+        mehr lesen
+      </button>
+    </p>
     <!-- Modal -->
     <div class="modal fade" id="entry<%= entry.id %>_textbox_de" tabindex="-1" role="dialog" aria-labelledby="entry<%= entry.id%>_textbox_de_label">
       <div class="modal-dialog" role="document">
@@ -37,14 +38,18 @@
         </div>
       </div>
     </div>
+  <% else %>
+    <p class="def_de"> <%= entry.definition_de %></p>
   <% end %>
-  <br>
-  <span class="def_en"> <%= entry.definition_en %></span>
+
   <% if entry.textbox_en %>
+    <p class="def_en">
+    <%= entry.definition_en %>
     <button type="button" class="<%= odd ? "btn-odd" : "" %> btn btn-default btn-sm" data-toggle="modal" data-target="#entry<%= entry.id %>_textbox_en">
       <i class="fa fa-book"></i>
       read more
     </button>
+    </p>
     <!-- Modal -->
     <div class="modal fade" id="entry<%= entry.id %>_textbox_en" tabindex="-1" role="dialog" aria-labelledby="entry<%= entry.id%>_textbox_en_label">
       <div class="modal-dialog" role="document">
@@ -61,8 +66,24 @@
         </div>
       </div>
     </div>
+  <% else %>
+    <p class="def_en"> <%= entry.definition_en %></p>
   <% end %>
-  <br>
-  <span class="def_fr"> <%= entry.definition_fr %></span>
-  </p>
+  <p class="def_fr"> <%= entry.definition_fr %></p>
+
+  <% unless entry.references.empty? %>
+    <p class="references">
+    (<i class="fa fa-hand-o-right"></i> 
+    <% entry.references.each_with_index do |ref, index| %>
+      <% if ref.icon %>
+        <img class="reference-icon" src="<%= ref.icon.icon.url %>" alt="<%= ref.icon.icon.path %>">
+      <% end %>
+      <%= link_to ref.name, ref.url, target: "_blank" %>
+      <% unless index == entry.references.count - 1 %>
+        ;
+      <% end %>
+    <% end %>
+    )
+    </p>
+  <% end %>
 </div>
