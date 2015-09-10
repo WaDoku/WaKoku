@@ -13,7 +13,7 @@ RSpec.describe Entry, type: :model do
       expect(entry.save).to be true
       entry.image = File.open("spec/fixtures/komiketo.jpg") #> 1mb
       expect(entry.save).to be false
-      expect(entry.errors.full_messages).to eq ["Image Datei überschreitet das Uploadlimit"]
+      expect(entry.errors.full_messages).to eq ["Bild Datei überschreitet das Uploadlimit"]
     end
 
     it "should validate the mime_type of image" do
@@ -23,7 +23,7 @@ RSpec.describe Entry, type: :model do
       expect(entry.save).to be true
       entry.image = File.open("spec/fixtures/PflichtenheftWaKoku.pdf")
       expect(entry.save).to be false
-      expect(entry.errors.full_messages).to eq ["Image Format nicht zugelassen"]
+      expect(entry.errors.full_messages).to eq ["Bild Format nicht zugelassen"]
     end
   end
 end
