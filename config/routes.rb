@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get "/", to: redirect("admin/entries")
     get "log_out" => "sessions#destroy",  as: :log_out
     get "log_in" => "sessions#new", as: :log_in
+    get "data_export" => "data_export#download", as: :data_export
     resources :sessions
     resources :entries do
       member do
