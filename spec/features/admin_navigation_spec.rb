@@ -17,6 +17,8 @@ RSpec.feature "Admin can navigate through the editing interface", type: :feature
     expect(current_path).to eq new_admin_entry_path
     click_link "Icons Verwalten"
     expect(current_path).to eq admin_icons_path
+    click_link "Exportieren"
+    expect(page.response_headers['Content-Type']).to eq "text/plain; charset=utf-8"
   end
 
   scenario "Links in entry#index" do

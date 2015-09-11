@@ -19,6 +19,12 @@
           <li class="<%= current_page?(admin_entries_path) ? "active" : "" %>"><%= link_to "Alle Einträge", admin_entries_path %></li>
           <li class="<%= current_page?(new_admin_entry_path) ? "active" : "" %>"><%= link_to "Neuer Eintrag", new_admin_entry_path %></li>
           <li class="<%= current_page?(admin_icons_path) ? "active" : "" %>"><%= link_to "Icons Verwalten", admin_icons_path %></li>
+          <li class="">
+            <%= link_to admin_data_export_path do %>
+              <i class="fa fa-download"></i>
+              Exportieren
+            <% end %>
+          </li>
         </ul>
 
         <%= form_tag admin_entries_path, method: :get, class: "navbar-form navbar-right" do %>
