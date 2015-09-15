@@ -3,7 +3,7 @@ class Admin::EntriesController < Admin::AdminController
   before_filter :get_entry, only: [:show, :edit, :update, :destroy, :delete_image]
   def index
     @page = params[:page] || 1
-    @entries = params[:search] ? Entry.where("writing = :writing OR kana = :kana OR romaji = :romaji OR definition_de LIKE :def_de OR definition_en LIKE :def_en OR definition_fr LIKE :def_fr", search_params(params[:search])) : Entry.all
+    @entries = params[:search] ? Entry.where("writing LIKE :writing OR kana LIKE :kana OR romaji LIKE :romaji OR definition_de LIKE :def_de OR definition_en LIKE :def_en OR definition_fr LIKE :def_fr", search_params(params[:search])) : Entry.all
     @total = @entries.count
     @entries = @entries.page(@page)
   end
@@ -66,10 +66,7 @@ class Admin::EntriesController < Admin::AdminController
   #i.e. %?% for LIKE
   def search_params search
     search = Hash.new
-    [:writing, :kana, :romaji].each do |field|
-      search[field] = params[:search]
-    end
-    [:def_de, :def_en, :def_fr].each do |field|
+    [:writing, :kana, :romaji, :def_de, :def_en, :def_fr].each do |field|
       search[field] = "%#{params[:search]}%"
     end
     search

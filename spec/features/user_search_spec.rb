@@ -23,6 +23,25 @@ RSpec.feature "User can search entries", type: :feature do
 
     expect(page).to have_content "Suchergebnisse 1 Treffer"
     expect(page).to have_content @haniwa.writing
+
+    #partial match for kanji, romaji and kana
+    visit root_path
+    within ".content" do
+      fill_in "search", with: "埴"
+    end
+    click_button "Suchen!"
+
+    expect(page).to have_content "Suchergebnisse 1 Treffer"
+    expect(page).to have_content @haniwa.writing
+
+    visit root_path
+    within ".content" do
+      fill_in "search", with: "はに"
+    end
+    click_button "Suchen!"
+
+    expect(page).to have_content "Suchergebnisse 1 Treffer"
+    expect(page).to have_content @haniwa.writing
   end
 
   scenario "User send empty search request" do

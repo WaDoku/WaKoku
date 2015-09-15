@@ -20,5 +20,9 @@ RSpec.feature "Admin can search entries", type: :feature do
     expect(page).to have_content "1 Treffer"
     expect(page).to have_content @haniwa.writing
     expect(page).to have_content @haniwa.kana
+    visit admin_entries_path + "?search=hani"
+    expect(page).to have_content "1 Treffer"
+    expect(page).to have_content @haniwa.writing
+    expect(page).to have_content @haniwa.kana
   end
 end
