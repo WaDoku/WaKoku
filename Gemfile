@@ -33,6 +33,7 @@ gem 'font-awesome-less'
 gem 'lodash-rails'
 gem 'kaminari'
 gem 'dragonfly', '~> 1.0.10'
+gem "strip_attributes"
 
 group :development, :test do
   gem 'binding_of_caller'

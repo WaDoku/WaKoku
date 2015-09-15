@@ -53,10 +53,10 @@ RSpec.describe Admin::EntriesController, type: :controller do
       expect(Entry.last.image.name).to eq "haniwa.svg"
     end
 
-    it "should ignore blank params" do
+    it "should set blank params to nil" do
       old_def = entry.definition_de
       put :update, id: entry.id, entry: { definition_de: "", textbox_de: "" }
-      expect(Entry.last.definition_de).to eq old_def
+      expect(Entry.last.definition_de).to be_nil
       expect(Entry.last.textbox_de).to be_nil
     end
   end

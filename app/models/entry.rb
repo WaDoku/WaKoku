@@ -1,5 +1,6 @@
 #encoding: utf-8
 class Entry < ActiveRecord::Base
+  strip_attributes
   has_many :references
   dragonfly_accessor :image
   validates_presence_of :writing
