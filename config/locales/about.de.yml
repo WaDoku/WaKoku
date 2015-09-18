@@ -1,40 +1,56 @@
 de:
   about:
-    title: "Welcome to WaKoku.eu"
+    title: "Willkommen zu WaKoKu.eu!"
     content_html: |
-      <p>WakoKu.eu is an online dictionary of archaeological terms in Japanese, German and English. It is hoped that in future other languages will be added.</p>
+      <p>
+      WakoKu.eu ist ein Online-Wörterbuch mit archäologischen Begriffen in Japanisch, Deutsch und Englisch. Es ist zu hoffen, dass in Zukunft weitere Sprachen hinzugefügt werden.
+      </p>
 
-      <p>The site is named after the ancient name for Japan (<em>Wa</em> 和) and archaeology (<em>kokogaku</em> 考古学).</p>
-      <p>The dictionary database was compiled by Werner Steinhaus with the support of Simon Kaner, based on the <em>Japanese-German Archaeological Dictionary</em> published by Werner Steinhaus as an Print-on-demand in 2010.
+      <p>
+      Die Benennung dieser Online-Application setzt sich zusammen aus dem alten Namen für die Japanische Inselwelt (<em>Wa</em> 和) und Archäologie (<em>kōkogaku</em> 考古学).
+      </p>
+
+      <p>
+      Die Wörterbuchdatenbank und ihr Konzept wurde und wird von Werner Steinhaus mit der Unterstützung von Simon Kaner, basierend auf dem Japanisch-Deutschen Archäologischen Wörterbuch von Werner Steinhaus (veröffentlicht als Print-on-demand im Jahr 2010) zusammengestellt.
+
       <br>
       Werner Steinhaus&#58; <em>Kleines Wörterbuch zur japanischen Archäologie - Japanisch-Deutsch (= Schriften zur Japanischen Archäologie I)</em>. epubli, Berlin 2010, <a href="https://de.wikipedia.org/wiki/Spezial:ISBN-Suche/9783869318035" target="_blank">ISBN 978-3-86931-803-5</a>
       </p>
 
-      <h2>Objectives of the Project</h2>
       <p>
-      To deliver a long-term resource on terminology used in Japanese archaeology and early history, which is being constantly updated and enhanced.
+      Diese Website wird vom Sainsbury Institute for the Study of Japanese Arts and Cultures (Norwich, England) unterstützt und auf dem Server der Universität Tübingen gehostet.
       </p>
 
       <p>
-      To encourage a stream-lined shared vocabulary for the study of Japanese archaeology and early history.
+      WaKoku.eu ist ein Projekt des WaDoku Online-Wörterbuchprojektes (Japanisch-Deutsch), was das Grundgerüst lieferte, die technische Unterstützung bereitstellte unter Federführung und kontinuierlicher Anleitung durch Dr. Ulrich Apel. Die Datenbank des WaKoKu.eu wird mit Gesamt WaDoku Website http://wadoku.eu verknüpft.
+      </p>
+
+      <h2>Ziele des Projekts</h2>
+
+      <p>
+      Eine langfristige Ressource zur Terminologie in der japanischen Archäologie und Frühgeschichte, die ständig aktualisiert und erweitert wird, bereitzustellen.
       </p>
 
       <p>
-      To facilitate the translation of Japanese language texts into German and English. WaKoku is not designed for the translation of archaeological materials into Japanese.
+      Um ein standardisiertes Vokabular für das Studium der japanischen Archäologie und Frühgeschichte zu fördern.
       </p>
 
       <p>
-      The resource is open-access and free to use.
+      Zur Erleichterung der Übersetzung von japanischen, archäologischen Textmaterialien ins Deutsch und Englische. WaKoku ist nicht für die Übersetzung von archäologischen Materialien ins Japanische gedacht.
       </p>
 
       <p>
-      It is intended that there will be an interactive user interface to encourage feedback from users. In the meantime, any queries or comments should be addressed to <a href="mailto:Wakoku@Wakoku.org" target="_top">Wakoku@Wakoku.org</a>
+      Diese Online-Application ist frei zugänglich und kostenlos.
+      </p>
+
+      <p>
+      Es ist beabsichtigt, eine interaktive Benutzerschnittstelle für das Feedback von Nutzern einzurichten.
       </p>
 
       <h2>Links</h2>
 
       <p>
-      WaKoku is designed to interface with a series of online initiatives relating to Japanese archaeology and cultural heritage&#58;
+      WaKoku wurde entwickelt in Verbindung mit einer Reihe von Online-Initiativen im Umfeld der japanischen Archäologie und des kulturellen Erbes der Japanischen Inselwelt&#58;
       </p>
 
       <p>
@@ -42,13 +58,14 @@ de:
       </p>
 
       <p>
-      Japanese Journal of Archaeology (<a href="http://www.jjarchaeology.jp" target="_blank">www.jjarchaeology.jp</a>)
+      <em>Japanese Journal of Archaeology</em> (<a href="http://www.jjarchaeology.jp" target="_blank">www.jjarchaeology.jp</a>)
       </p>
 
-      <h2>Other links</h2>
+      <h2>Andere Links</h2>
 
       <p>
-      Tübingen University Japanese Studies
+      Eberhard Karls Universität Tübingen, Asien-Orient-Institut, Abteilung für Japanologie
+      (<a href="http://www.uni-tuebingen.de/fakultaeten/philosophische-fakultaet/fachbereiche/aoi/japanologie/japanologie1.html" target="_blank">www.uni-tuebingen.de/fakultaeten/philosophische-fakultaet/fachbereiche/aoi/japanologie/japanologie1.html</a>)
       </p>
 
       <p>
@@ -59,6 +76,3 @@ de:
       <p>
       Society for East Asian Archaeology (<a href="http://www.seaa-web.net" target="_blank">www.seaa-web.net</a>)
       </p>
-
-
-
