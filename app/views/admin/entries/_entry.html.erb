@@ -31,7 +31,7 @@
   </p>
   <% if entry.textbox_de %>
     <p class="def_de">
-      <%= entry.definition_de ? "✦ " + entry.definition_de : "" %>
+      <%= markdown_def entry.definition_de, "✦" %>
       <button type="button" class="<%= odd ? "btn-odd" : "" %> btn btn-default btn-sm" data-toggle="modal" data-target="#entry<%= entry.id %>_textbox_de">
         <i class="fa fa-book"></i>
         mehr lesen
@@ -48,18 +48,20 @@
             </h4>
           </div>
           <div class="modal-body">
-            <%= entry.textbox_de %>
+            <%= markdown entry.textbox_de %>
           </div>
         </div>
       </div>
     </div>
   <% else %>
-    <p class="def_de"><%= entry.definition_de ? "✦ " + entry.definition_de : "" %></p>
+    <p class="def_de">
+      <%= markdown_def entry.definition_de, "✦" %>
+    </p>
   <% end %>
 
   <% if entry.textbox_en %>
     <p class="def_en">
-    <%= entry.definition_en ? "♦︎ " + entry.definition_en : "" %>
+    <%= markdown_def entry.definition_en, "♦︎" %>
     <button type="button" class="<%= odd ? "btn-odd" : "" %> btn btn-default btn-sm" data-toggle="modal" data-target="#entry<%= entry.id %>_textbox_en">
       <i class="fa fa-book"></i>
       read more
@@ -76,15 +78,17 @@
             </h4>
           </div>
           <div class="modal-body">
-            <%= entry.textbox_en %>
+            <%= markdown entry.textbox_en %>
           </div>
         </div>
       </div>
     </div>
   <% else %>
-    <p class="def_en"><%= entry.definition_en ? "♦︎ " + entry.definition_en : "" %></p>
+    <p class="def_en">
+    <%= markdown_def entry.definition_en, "♦︎" %>
+    </p>
   <% end %>
-  <p class="def_fr"> <%= entry.definition_fr %></p>
+  <p class="def_fr"> <%= markdown_def entry.definition_fr, "" %></p>
 
   <% unless entry.references.empty? %>
     <p class="references">
